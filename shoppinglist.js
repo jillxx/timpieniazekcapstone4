@@ -11,23 +11,28 @@ var products = [
 //var prices = [11.99, 14.99, 28.99, 8.99, 45.99, 19.99];
 var item;
 var button;
-var
+var button2;
 for (var i = 0; i < products.length; i++) {
 	item = document.createElement("p");
 	item.innerText = products[i].quantity + products[i].name + products[i].price;
 	document.body.appendChild(item);
 	button = document.createElement("button");
 	button.innerText = "+";
-	button.addEventListener("click", addItem());
-	alert("button about to be created");
+	
+	//alert("button about to be created");
+	document.body.appendChild(button);
+	button = document.createElement("button");
+	button.innerText = "-";
 	document.body.appendChild(button);
 	
 };
 
 
 
-function addItem() {
+function addItem(num) {
 	alert("CLICKED!");
-	// products[i].quantity.value++;
-	// console.log(products[i].quantity.value);
+	
+	console.log(num);
+	products[num].quantity++;
+	console.log(products[num]);
 }
